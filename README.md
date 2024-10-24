@@ -23,10 +23,13 @@ Before you can build and use the tool, make sure you have the following installe
 You can follow the steps below to install and build the command-line tool: 
 
 ### Clone the Repository
-Clone this repository: 
+First Clone this repository: 
 
 ```
 git clone https://github.com/nogibjj/Jennifer_Mini7_Package_Python_Script_Rust.git
+```
+Then, navigate to the Calculation Project Directory where the Cargo.toml file is located: 
+```
 cd Calculation
 ```
 
