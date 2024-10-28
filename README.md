@@ -1,4 +1,6 @@
+[![python_CI](https://github.com/nogibjj/Jennifer_Mini8_Python_VS_Rust/actions/workflows/python_CI.yml/badge.svg)](https://github.com/nogibjj/Jennifer_Mini8_Python_VS_Rust/actions/workflows/python_CI.yml)
 
+[![Rust CI](https://github.com/nogibjj/Jennifer_Mini8_Python_VS_Rust/actions/workflows/CI.yml/badge.svg)](https://github.com/nogibjj/Jennifer_Mini8_Python_VS_Rust/actions/workflows/CI.yml)
 
 # Mini Project 8: Prime Number Calculation: Python to Rust Rewrite
 
@@ -37,38 +39,40 @@ JENNIFER_MINI8_PYTHON_VS_RUST/
 
 ## Python and Rust and Scripts
 **Python Script**
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 **Rust Script**
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 
 ## Performance Comparison Results
 
-### Time Performance (in seconds)
+### Time Performance Comparison (in seconds):
 
-Limit    | Python         | Rust (Release) | Speed Difference
----------|---------------|----------------|------------------
-100      | 0.000008s     | 0.000001s      | Rust ~8x faster
-1,000    | 0.000038s     | 0.000003s      | Rust ~13x faster
-10,000   | 0.000393s     | 0.000030s      | Rust ~13x faster
-100,000  | 0.004029s     | 0.000356s      | Rust ~11x faster
-1,000,000| 0.042092s     | 0.002236s      | Rust ~19x faster
+Limit     | Python         | Rust (Release) | Speed Difference
+----------|---------------|----------------|------------------
+100       | 0.000010s     | 0.000002s      | Rust ~5x faster
+1,000     | 0.000050s     | 0.000005s      | Rust ~10x faster
+10,000    | 0.000531s     | 0.000029s      | Rust ~18x faster
+100,000   | 0.004930s     | 0.000345s      | Rust ~14x faster
+1,000,000 | 0.044115s     | 0.003814s      | Rust ~12x faster
 
-### Memory Usage (in bytes)
-Limit    | Python        | Rust          | Memory Savings
----------|--------------|---------------|----------------
-100      | 312 bytes    | 224 bytes     | Rust uses 28% less
-1,000    | 1,432 bytes  | 1,368 bytes   | Rust uses 4% less
-10,000   | 10,008 bytes | 9,856 bytes   | Rust uses 1.5% less
-100,000  | 85,176 bytes | 76,760 bytes  | Rust uses 10% less
-1,000,000| 632,824 bytes| 628,008 bytes | Rust uses 1% less
+### Memory Usage Comparison (in bytes):
+
+Limit     | Python        | Rust          | Memory Savings
+----------|--------------|---------------|------------------
+100       | 312 bytes    | 224 bytes     | Rust uses 28% less
+1,000     | 1,432 bytes  | 1,368 bytes   | Rust uses 4% less
+10,000    | 10,008 bytes | 9,856 bytes   | Rust uses 1.5% less
+100,000   | 85,176 bytes | 76,760 bytes  | Rust uses 10% less
+1,000,000 | 632,824 bytes| 628,008 bytes | Rust uses 1% less
+
 
 **Python:**
-![alt text](image-4.png)
+![alt text](images/image-5.png)
 
 **Rust:**
-![alt text](image-5.png)
+![alt text](images/image-4.png)
 
 
 ### Key Findings
