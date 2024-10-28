@@ -1,7 +1,4 @@
-# Makefile for Rust Project
-
-
-all: check build format lint test
+# Makefile for Rust
 
 check:
 	cargo check
@@ -20,3 +17,6 @@ test:
 
 release:
 	cargo build --release
+
+
+all: check build format lint test

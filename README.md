@@ -1,69 +1,88 @@
-[![Rust CI](https://github.com/nogibjj/Jennifer_Mini7_Package_Python_Script_Rust/actions/workflows/CI.yml/badge.svg)](https://github.com/nogibjj/Jennifer_Mini7_Package_Python_Script_Rust/actions/workflows/CI.yml)
 
-# Mini Project 7: Package a Python Script into a Command-Line Tool Using Rust
+
+# Mini Project 8: Prime Number Calculation: Python to Rust Rewrite
 
 ## Project Purpose
-This project aims to package a Python Script into a Rust-based Command-Line Tool for calculating statistical values of sum and mean. The tool is packaged in Rust and can be built for both development and release modes. This Readme acts as a user guide to help you get started with installing and using the tool , enjoy ~ 
+This project demonstrates how to take an existing Python script for data processing (in this case, finding prime numbers using the Sieve of Eratosthenes algorithm) and rewrite it in Rust to highlight performance improvements in terms of speed and resource usage.
+
+The original Python script for prime number calculation was rewritten in Rust, and we compare the performance (execution time and memory usage) between the two implementations.
+
+## Project Requirements
+* Take an existing Python script for data processing
+* Rewrite it in Rust
+* Highlight improvements in speed and resource usage
 
 ## Project Structure
 
-![alt text](image.png)
-
-*Features*
-* Built with Rust for performance and safety
-* Command-line interface using clap
-* Calculate the sum and mean of two integers
-
-## Project Prerequisites
-Before you can build and use the tool, make sure you have the following installed on your system:
-* Rust (latest stable version recommended)
-* Cargo (Rust's package manager, included with Rust)
-
-## Tool Installation & Development
-You can follow the steps below to install and build the command-line tool: 
-
-### Clone the Repository
-First Clone this repository: 
-
 ```
-git clone https://github.com/nogibjj/Jennifer_Mini7_Package_Python_Script_Rust.git
-```
-Then, navigate to the Calculation Project Directory where the Cargo.toml file is located: 
-```
-cd Calculation
+JENNIFER_MINI8_PYTHON_VS_RUST/
+├── Calculation/
+│   ├── src/
+│   │   └── main.rs       # Rust implementation
+│   ├── target/
+│   │   ├── debug/        # Debug build outputs
+│   │   └── release/      # Release build outputs
+│   ├── Cargo.toml        # Rust project configuration
+│   └── Cargo.lock        # Rust dependency lock file
+├── main.py               # Python implementation
+├── test_main.py         # Python test cases
+└── requirements.txt      # Python dependencies
 ```
 
-### Build the Project
+## Project highlights
+* Sieve of Eratosthenes algorithm for finding prime numbers
+* Performance measurements (time and memory usage)
+* Comprehensive test cases
+* Support for various input sizes (100 to 1,000,000)
 
-#### Cargo Check
-`Cargo check` is a Rust command that quickly checks your code for errors without compiling an executable, making it faster than cargo build for iterative development.
-![alt text](image-4.png)
+## Python and Rust and Scripts
+**Python Script**
+![alt text](image-2.png)
 
-#### Cargo Build
-To compile the project, you can choose between development and release builds:
-* If you are working on the project or want faster builds with debug symbols: `cargo build`
-
-![alt text](image-5.png)
-
-* For optimized performance and a smaller binary: `cargo build --release`
-
+**Rust Script**
 ![alt text](image-3.png)
 
-## Tool Usage
 
-Once the tool is built, you can use it via the command line. The tool accepts two integer numbers as command-line arguments for calculating the sum and mean.
+## Performance Comparison Results
 
-To execute the tool:
-`Cargo run <num1> <num2>`
+### Time Performance (in seconds)
 
-*Example Commands* 
-![alt text](image-1.png)
+Limit    | Python         | Rust (Release) | Speed Difference
+---------|---------------|----------------|------------------
+100      | 0.000008s     | 0.000001s      | Rust ~8x faster
+1,000    | 0.000038s     | 0.000003s      | Rust ~13x faster
+10,000   | 0.000393s     | 0.000030s      | Rust ~13x faster
+100,000  | 0.004029s     | 0.000356s      | Rust ~11x faster
+1,000,000| 0.042092s     | 0.002236s      | Rust ~19x faster
+
+### Memory Usage (in bytes)
+Limit    | Python        | Rust          | Memory Savings
+---------|--------------|---------------|----------------
+100      | 312 bytes    | 224 bytes     | Rust uses 28% less
+1,000    | 1,432 bytes  | 1,368 bytes   | Rust uses 4% less
+10,000   | 10,008 bytes | 9,856 bytes   | Rust uses 1.5% less
+100,000  | 85,176 bytes | 76,760 bytes  | Rust uses 10% less
+1,000,000| 632,824 bytes| 628,008 bytes | Rust uses 1% less
+
+**Python:**
+![alt text](image-4.png)
+
+**Rust:**
+![alt text](image-5.png)
 
 
-## Artifact Screenshot
-![alt text](image-6.png)
+### Key Findings
+**Speed Improvements:**
+* Rust shows significant performance advantages, especially in release mode
+* Performance gap widens with larger inputs
+* Maximum speedup of ~19x for 1 million elements
+
+**Memory Efficiency:**
+* Rust consistently uses less memory across all input sizes
+* Memory savings range from 1% to 28%
+* Both implementations show good memory scaling
 
 
-## Reference
-https://github.com/johncoogan53/Rust-Template
+### Conclusion
+The project successfully demonstrates Rust's performance advantages over Python for computationally intensive tasks. While Python offers excellent readability and ease of development, Rust provides superior performance and memory efficiency, particularly for larger datasets and when optimized builds are used.
 
